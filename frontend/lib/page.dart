@@ -54,6 +54,8 @@ class _pageState extends State<page> {
           ),
           SizedBox(height: 30),
           TextField(
+            keyboardType: TextInputType.multiline,
+            maxLines: null,
             controller: noteControl,
             decoration: InputDecoration(hintText: "Description"),
           ),

@@ -43,8 +43,6 @@ class _homeState extends State<home> {
                   ),
                 ),
                 Note(context),
-                // Note('Bhoomika'),
-                // Note('Apoorva'),
               ],
             ),
           ),
@@ -57,7 +55,6 @@ class _homeState extends State<home> {
     return FutureBuilder(
       future: httpService.loadData(),
       builder: (context, snapshot) {
-        print("Hello");
         if (snapshot.hasData) {
           return Flexible(
             child: Container(
@@ -91,11 +88,15 @@ class _homeState extends State<home> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Text(
-                                snapshot.data[index].note,
-                                style: TextStyle(
-                                  fontSize: 15.0,
+                              padding:
+                                  const EdgeInsets.only(left: 30, right: 30),
+                              child: Align(
+                                alignment: Alignment.center,
+                                child: Text(
+                                  snapshot.data[index].note,
+                                  style: TextStyle(
+                                    fontSize: 15.0,
+                                  ),
                                 ),
                               ),
                             ),
