@@ -1,4 +1,5 @@
 # Notes Application
+This Application is a simple implementation of the actual Notes Application.
 
 ### Home Page of the Application
 
