@@ -65,11 +65,18 @@ class _homeState extends State<home> {
                 shrinkWrap: true,
                 itemCount: snapshot.data.length,
                 itemBuilder: (BuildContext context, int index) {
-                  return Container(
-                    child: Card(
-                      margin: EdgeInsets.all(16.0),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                  return Padding(
+                    padding:
+                        const EdgeInsets.only(left: 40, right: 40, top: 35),
+                    child: Container(
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(
+                            color: Colors.black,
+                            width: 2,
+                          ),
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
@@ -120,9 +127,7 @@ class _homeState extends State<home> {
                                     onPressed: () async {
                                       await httpService
                                           .deletePost(snapshot.data[index].id);
-                                      setState(() {
-
-                                      });
+                                      setState(() {});
                                     },
                                   ),
                                 ],

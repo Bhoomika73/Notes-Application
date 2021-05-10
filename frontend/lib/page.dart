@@ -3,11 +3,6 @@ import 'package:frontend/home.dart';
 import 'Control/service.dart';
 import 'model/album.dart';
 
-TextEditingController titleControl = TextEditingController();
-
-
-TextEditingController noteControl = TextEditingController();
-
 class page extends StatefulWidget {
   Note note;
 
@@ -17,8 +12,10 @@ class page extends StatefulWidget {
 }
 
 class _pageState extends State<page> {
-    Service httpService = new Service();
-  
+  TextEditingController titleControl = TextEditingController();
+  TextEditingController noteControl = TextEditingController();
+  Service httpService = new Service();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
