@@ -111,7 +111,7 @@ class _homeState extends State<home> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) =>
+                                          builder: (context) => 
                                               updatePage(snapshot.data[index]),
                                         ),
                                       );
